@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import api from './services/api';
 import './App.css';
 
+import logo from './assets/logo.svg';
+
 function App() {
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log('Hello World');
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="container">
+      <img src={ logo } alt="AirCnC"/> 
+
+      <div className="content">
         <p>
-          AirCNC
+          Ofereça <strong>spots</strong> para programadores e encontre <strong>talentos</strong> para sua empresa.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">E-MAIL *</label>
+          <input 
+            type="email" 
+            id="email" 
+            placeholder= "Seu melhor e-mail"
+          />
+
+          <button className= "btn" type= "submit">Entrar</button>
+        </form>
+      </div>
     </div>
   );
 }
