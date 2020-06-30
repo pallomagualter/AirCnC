@@ -8,10 +8,9 @@ const User = require('../models/User');
 
          if (!user){
             user = await User.create({ email });
-            return res.json(user);
-         } else {
-                return res.json({ message: "Usuário já cadastrado" });
-                }
+         } 
+        
+         return res.json(user);
         
      }
  };
