@@ -1,20 +1,31 @@
-ul.spot_list {
-    width: 100%;
-    list-style: none;
+ul.spot_list { 
+    width: 100%; /*largura de 100%*/
+    list-style: none; /* para tirar as bolinhas do liste */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr; /* para definir as duas colunas fr é a unidade que o grid utiliza e significa que quer espaços iguais*/
+    grid-gap: 20px;  /* espaçamento de 20px entre as colunas */
+    margin-bottom: 30px; /* margin inferior de 30px */
 }
 
 ul.spot_list li {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* para indicar que os itens ficaram um abaixo do outro */
 }
 
 ul.spot_list li header {
     width: 100%;
     height: 120px;
-    background-size: cover;
+    background-size: cover; /* ocupa todo o espaço idependente da mudança da largura e altura */
     border-radius: 4px;
+}
+
+ul.spot_list li strong {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #444;
+}
+
+ul.spot_list li span {
+    font-size: 15px;    
+    color: #999;
 }

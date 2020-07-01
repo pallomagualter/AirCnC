@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -23,15 +25,19 @@ export default function Dashboard() {
 
     return (
        <>
-            <ul className="spot-list">
+            <ul className="spot_list">
                 {spots.map(spot => (
                     <li key={spot._id}> {/* chave única para facilitar encontrar a lista */}
                         <header style={{ backgroundImage: `url(${spot.thumbnail_url})` }} />
                         <strong>{spot.company}</strong>
-                        <span>{spot.price}</span>
+                        <span>{spot.price ? `R$ ${spot.price} /dia` : 'GRATUITO' }</span> {/* IF ternário (IF "?"  isso  ": " representando ELSE) */}
                     </li>
                 ))}
             </ul>
+
+            <Link to="/new">  {/* Link serve para criar links para redirecionar usuário para página que queremos */}
+              <button className="btn">Cadastrar novo Spot</button> 
+            </Link>
        </> 
     )
 }
