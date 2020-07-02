@@ -18,4 +18,10 @@ const User = require('../models/User');
 
  /*  Métodos disponíveis:
  * index (listagem), show (listar uma única), store (criando), update(alterando), destroy(excluindo)
+
+
+ else {
+            return res.json({ message: "Usuário já cadastrado! "});
+        }
+
  */
