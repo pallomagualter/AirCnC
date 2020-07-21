@@ -6,7 +6,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.9.20",
+    "update": "^0.7.4",
+    "upgrade": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
